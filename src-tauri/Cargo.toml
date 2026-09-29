@@ -1,0 +1,18 @@
+[package]
+name = "little-dubber-buddy"
+version = "0.1.0"
+edition = "2021"
+description = "Little Dubber Buddy — a cozy desktop writing companion."
+license = "MIT"
+
+[lib]
+name = "little_dubber_buddy_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+lil-dubber-core = { path = "../crates/core" }
+serde_json = "1"
